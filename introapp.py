@@ -9,6 +9,18 @@ st.set_page_config(
     page_icon="🎓",
     layout="wide"
 )
+st.markdown(
+    """
+    <style>
+    /* Target the main title rendered by st.title */
+    .stApp h1 {
+        font-size: 32px !important;  /* Change 32px to your desired size */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.image("images/header_image.png", use_container_width=True)
 # --- Logo ---
 if os.path.exists("college_logo.png"):
