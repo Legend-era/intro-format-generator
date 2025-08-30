@@ -12,26 +12,24 @@ if "agreed" not in st.session_state:
 
 # --- Verification / Terms Page ---
 if not st.session_state.agreed:
-    if os.path.exists("welcome_banner.png"):
-        st.image("welcome_banner.png", width=400)  # Optional welcome image/banner
     st.title("Welcome to the Student Introduction Generator 🎓")
     
     st.markdown("""
     Please read and agree to the following before continuing:
-    
+
     1. This app collects basic student information for generating introductions.
     2. Ensure the information you provide is accurate.
     3. Do not share sensitive personal data like passwords.
     4. By continuing, you agree to use this app responsibly.
     """)
-    
+
     agree = st.checkbox("✅ I have read and agree to the above terms")
 
     if agree:
         st.session_state.agreed = True
-        st.rerun()  # reloads app, now it will go past this block
+        st.rerun()
     else:
-        st.stop()   # ❌ stop the app until they agree
+        st.stop()
     # --- CSS Styling ---
     st.markdown(
         """
