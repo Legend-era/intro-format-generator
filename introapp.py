@@ -12,7 +12,7 @@ st.set_page_config(
     )
 
     # --- CSS Styling ---
-    st.markdown(
+st.markdown(
         """
         <style>
         body {
