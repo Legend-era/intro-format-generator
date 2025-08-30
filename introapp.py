@@ -5,7 +5,7 @@ from streamlit_tags import st_tags
 from PIL import Image
 import os
 import importlib
-
+import importlib.util
 # --- Session State for Verification ---
 if "agreed" not in st.session_state:
     st.session_state.agreed = False
