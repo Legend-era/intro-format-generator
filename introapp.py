@@ -9,7 +9,33 @@ st.set_page_config(
     page_icon="🎓",
     layout="wide"
 )
+if "header_image.png":
+    st.image("header_image.png", use_column_width=True)
+gallery_images = [
+    "gallery1.png",
+    "gallery2.png",
+    "gallery3.png",
+    "gallery4.png",
+    "gallery5.png"
+]
 
+# HTML + CSS for continuous horizontal scrolling
+scrolling_html = f"""
+<div style="display: flex; overflow: hidden; width: 100%; height: 200px; margin-top: 20px;">
+    <div style="display: flex; animation: scroll-left 20s linear infinite;">
+        {"".join([f'<img src="{img}" style="height:200px; margin-right:10px;">' for img in gallery_images])}
+    </div>
+</div>
+
+<style>
+@keyframes scroll-left {{
+    0% {{ transform: translateX(0); }}
+    100% {{ transform: translateX(-{len(gallery_images)*210}px); }}
+}}
+</style>
+"""
+
+st.markdown(scrolling_html, unsafe_allow_html=True)
 # --- CSS Styling ---
 st.markdown(
     """
