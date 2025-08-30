@@ -48,19 +48,6 @@ else:
     # Load the model
     nlp = spacy.load(model_name)
 
-
-# Check if model is installed
-if importlib.util.find_spec(model_name) is None:
-    download(model_name)
-
-    # Load the model
-    nlp = spacy.load(model_name)
-
-
-    # Load the model
-    nlp = spacy.load(model_name)
-
-
     # --- Page Config ---
     st.set_page_config(
         page_title="Student Intro Generator",
