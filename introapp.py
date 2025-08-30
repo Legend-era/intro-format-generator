@@ -10,47 +10,6 @@ st.set_page_config(
     layout="wide"
 )
 st.image("images/header_image.png", use_column_width=True)
-
-# HTML + CSS for continuous horizontal scrolling
-scrolling_html = f"""
-<div style="display: flex; overflow: hidden; width: 100%; height: 200px; margin-top: 20px;">
-    <div style="display: flex; animation: scroll-left 20s linear infinite;">
-        {"".join([f'<img src="{img}" style="height:200px; margin-right:10px;">' for img in gallery_images])}
-    </div>
-</div>
-
-<style>
-@keyframes scroll-left {{
-    0% {{ transform: translateX(0); }}
-    100% {{ transform: translateX(-{len(gallery_images)*210}px); }}
-}}
-</style>
-"""
-
-st.markdown(scrolling_html, unsafe_allow_html=True)
-# --- CSS Styling ---
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #f0f8ff;
-    }
-    .stButton>button {
-        background-color: #4CAF50;
-        color: white;
-        border-radius: 12px;
-        padding: 10px 24px;
-        font-size: 16px;
-    }
-    .stTextInput>div>div>input, .stNumberInput>div>div>input, .stTextArea>div>div>textarea {
-        border-radius: 8px;
-        padding: 5px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # --- Logo ---
 if os.path.exists("college_logo.png"):
     st.markdown("<div style='text-align: center;'><img src='college_logo.png' width='150'></div>", unsafe_allow_html=True)
