@@ -25,12 +25,13 @@ if not st.session_state.agreed:
     4. By continuing, you agree to use this app responsibly.
     """)
     
-    agree = st.checkbox("✅ I have read and agree to the above terms")
-    
+       agree = st.checkbox("✅ I have read and agree to the above terms")
+
     if agree:
         st.session_state.agreed = True
-        st.rerun()  # Refresh app to show main page
-
+        st.rerun()  # reloads app, now it will go past this block
+    else:
+        st.stop()   # ❌ stop the app until they agree
     # --- CSS Styling ---
     st.markdown(
         """
