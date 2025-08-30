@@ -32,17 +32,29 @@ if not st.session_state.agreed:
 
 else:
     # --- Main App Code Starts Here ---
-    
+
     # --- Load spaCy model with fallback ---
     import spacy
-    import subprocess
+    from spacy.cli import download
     import importlib.util
 
     model_name = "en_core_web_sm"
 
     # Check if model is installed
     if importlib.util.find_spec(model_name) is None:
-        subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
+        download(model_name)
+
+    # Load the model
+    nlp = spacy.load(model_name)
+
+
+# Check if model is installed
+if importlib.util.find_spec(model_name) is None:
+    download(model_name)
+
+# Load the model
+nlp = spacy.load(model_name)
+
 
     # Load the model
     nlp = spacy.load(model_name)
