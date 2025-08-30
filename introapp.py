@@ -258,3 +258,18 @@ Thank you seniors for giving me this opportunity.
 
 # --- Footer ---
 st.markdown("<hr><p style='text-align:center'>Developed by Mallick S. | Contact: Soumyakanta2005@outlook.com", unsafe_allow_html=True)
+# --- Footer with Instagram link ---
+st.markdown(
+    """
+    <hr>
+    <div style="text-align: center; padding: 20px;">
+        <h3>Connect with Us</h3>
+        <!-- Instagram Icon with Link -->
+        <a href="https://www.instagram.com/the_randomness_squad/" target="_blank">
+            <img src="images/instagram.png" width="40" style="margin: 0 10px;">
+        </a>
+        <p style="margin-top: 10px;">Follow us on Instagram: <a href="https://www.instagram.com/the_randomness_squad/" target="_blank">@the_randomness_squad</a></p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
