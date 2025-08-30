@@ -34,10 +34,10 @@ else:
     # --- Main App Code Starts Here ---
     # Load spaCy model
     try:
-    nlp = spacy.load("en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm")
     except OSError:
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
-    nlp = spacy.load("en_core_web_sm")
+        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
+        nlp = spacy.load("en_core_web_sm")
 
     # --- Page Config ---
     st.set_page_config(
