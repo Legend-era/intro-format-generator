@@ -46,12 +46,12 @@ else:
         download(model_name)
 
     def get_spacy_model(model_name="en_core_web_sm"):
-    try:
-        return spacy.load(model_name)
-    except OSError:
-        from spacy.cli import download
-        download(model_name)
-        return spacy.load(model_name)
+        try:
+            return spacy.load(model_name)
+       except OSError:
+            from spacy.cli import download
+            download(model_name)
+            return spacy.load(model_name)
     # Load the model
     nlp = spacy.load(model_name)
 
