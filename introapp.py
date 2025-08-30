@@ -33,9 +33,9 @@ if not st.session_state.agreed:
 else:
     # --- Main App Code Starts Here ---
     # Load spaCy model
-try:
+    try:
     nlp = spacy.load("en_core_web_sm")
-except OSError:
+    except OSError:
     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
     nlp = spacy.load("en_core_web_sm")
 
