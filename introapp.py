@@ -135,8 +135,42 @@ with st.expander("🎯 Education Background", expanded=False):
 # --- Personal Interests (Hobbies) ---
 st.header("🎨 Personal Interests")
 hobbies_database = [
-    "Cricket", "Football", "Hockey", "Volleyball", "Basketball", "Chess", "Swimming", "Singing", "Painting"
+    "Cricket","Football (Soccer)","Hockey","Volleyball","Basketball","Kabaddi","Handball",
+    "Rugby","Baseball","Softball","Badminton","Tennis","Table Tennis","Squash","Chess",
+    "Swimming","Gymnastics","Track & Field (Running)","Weightlifting","Wrestling","Boxing",
+    "Karate","Judo","Taekwondo","Kickboxing","Muay Thai","Wrestling (Freestyle & Greco-Roman)",
+    "Fencing","Kalaripayattu","Jiu-Jitsu","Lawn Tennis","Table Tennis","Squash","Badminton",
+    "Paddle Tennis","Racquetball","Pickleball","Handball","Dodgeball","Netball","Tennis Doubles",
+    "Table Tennis Doubles","Badminton Doubles","Synchronized Swimming","Rowing (Pair Boat)",
+    "Tandem Cycling","Mixed Martial Arts Sparring","Beach Volleyball Pairs","Rock Climbing Duo",
+    "Figure Skating Pairs","Rock Climbing","Mountaineering","Trekking","Hiking","Paragliding",
+    "Skydiving","Bungee Jumping","Whitewater Rafting","Surfing","Scuba Diving","Swimming",
+    "Kayaking","Canoeing","Sailing","Water Polo","Windsurfing","Jet Skiing","Diving","Snorkeling",
+    "Stand-up Paddleboarding","Singing","Dancing (Classical)","Dancing (Contemporary)","Painting",
+    "Sketching / Drawing","Calligraphy","Photography","Acting / Theatre","Music Instrument (Guitar)",
+    "Music Instrument (Piano)","Music Instrument (Violin)","Music Instrument (Flute)","Music Instrument (Drums)",
+    "Music Instrument (Tabla)","Music Instrument (Sitar)","Poetry Writing","Story Writing","Scriptwriting",
+    "Film Making","Animation","Pottery","Origami","Scrapbooking","Knitting","Crochet","Embroidery",
+    "Candle Making","Soap Making","Jewelry Making","Woodworking","Debating","Public Speaking",
+    "Model United Nations (MUN)","Blogging","Vlogging","Podcasting","Learning Languages","Calligraphy",
+    "Event Organizing","Cultural Dance","Chess","Sudoku","Crosswords","Rubik’s Cube","Puzzles",
+    "Brain Teasers","Math Puzzles","Coding / Programming","Competitive Programming","Robotics",
+    "Monopoly","Risk","Carrom","Ludo","Scrabble","Catan","Card Games (Rummy)","Poker","Bridge",
+    "Uno","Astronomy / Stargazing","Geocaching","Bird Watching","Nature Walks","Plant Study",
+    "Collecting Stamps","Collecting Coins","History Research","Visiting Museums","DIY Science Experiments",
+    "Gaming (PC)","Gaming (Console)","Mobile Gaming","Virtual Reality Gaming","3D Modelling",
+    "Graphic Design","Photo Editing","Video Editing","Animation","Web Development","App Development",
+    "Digital Art","Social Media Content Creation","Blogging","Vlogging","Podcasting","Streaming",
+    "AI / ML Projects","Cybersecurity Learning","Robotics","Cycling","Mountain Biking","Trekking",
+    "Camping","Orienteering","Adventure Racing","Paintball","Laser Tag","Archery","Horse Riding",
+    "Go-Karting","Motorcycling","Car Racing","Drone Racing","Skateboarding","Rollerblading",
+    "BMX","Snowboarding","Skiing","Ice Skating","Cooking","Baking","Gardening","Planting Bonsai",
+    "Home Decoration","Flower Arrangement","Pet Care","Woodworking","Sewing","Knitting",
+    "Upcycling / Recycling Crafts","Furniture Making","Candle Making","Soap Making",
+    "Organizing Spaces","Mixology (Non-Alcoholic Drinks)","Interior Design","Calligraphy",
+    "Jewelry Making","Scrapbooking"
 ]
+
 
 selected_activities = st_tags(
     label='🎨 Enter your hobbies / interests',
