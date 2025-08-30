@@ -31,8 +31,6 @@ st.markdown(
 
 # Display the title
 st.title("🎓 Student Introduction Format Generator")
-
-st.title("🎓 Student Introduction Format Generator")
 st.write("Fill in your details and generate either a **Casual** or a **Professional** introduction!")
 
 # --- Basic Info ---
