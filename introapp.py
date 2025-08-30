@@ -6,11 +6,11 @@ from PIL import Image
 import os
 
 # --- Session State for Verification ---
-        if "agreed" not in st.session_state:
+if "agreed" not in st.session_state:
             st.session_state.agreed = False
 
 # --- Verification / Terms Page ---
-        if not st.session_state.agreed:
+if not st.session_state.agreed:
     if os.path.exists("welcome_banner.png"):
         st.image("welcome_banner.png", width=400)  # Optional welcome image/banner
     st.title("Welcome to the Student Introduction Generator 🎓")
