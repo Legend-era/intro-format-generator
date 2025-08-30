@@ -4,43 +4,6 @@ import spacy
 from streamlit_tags import st_tags
 from PIL import Image
 import os
-
-# --- Session State for Verification ---
-if "agreed" not in st.session_state:
-            st.session_state.agreed = False
-
-# --- Verification / Terms Page ---
-if not st.session_state.agreed:
-    if os.path.exists("welcome_banner.png"):
-        st.image("welcome_banner.png", width=400)  # Optional welcome image/banner
-    st.title("Welcome to the Student Introduction Generator 🎓")
-    
-    st.markdown("""
-    Please read and agree to the following before continuing:
-    
-    1. This app collects basic student information for generating introductions.
-    2. Ensure the information you provide is accurate.
-    3. Do not share sensitive personal data like passwords.
-    4. By continuing, you agree to use this app responsibly.
-    """)
-    
-    agree = st.checkbox("✅ I have read and agree to the above terms")
-    
-    if agree:
-        st.session_state.agreed = True
-        st.rerun()  # Refresh app to show main page
-
-else:
-    # --- Main App Code Starts Here ---
-    # Load spaCy model
-    try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    import subprocess
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-    nlp = spacy.load("en_core_web_sm")
-
-
     # --- Page Config ---
     st.set_page_config(
         page_title="Student Intro Generator",
