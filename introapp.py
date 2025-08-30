@@ -25,7 +25,7 @@ if not st.session_state.agreed:
     4. By continuing, you agree to use this app responsibly.
     """)
     
-       agree = st.checkbox("✅ I have read and agree to the above terms")
+    agree = st.checkbox("✅ I have read and agree to the above terms")
 
     if agree:
         st.session_state.agreed = True
