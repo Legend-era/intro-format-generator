@@ -6,57 +6,7 @@ from PIL import Image
 import os
 import importlib
 import importlib.util
-# --- Session State for Verification ---
-if "agreed" not in st.session_state:
-    st.session_state.agreed = False
-
-# --- Verification / Terms Page ---
-if not st.session_state.agreed:
-    st.title("Welcome to the Student Introduction Generator 🎓")
-    
-    st.markdown("""
-    Please read and agree to the following before continuing:
-
-    1. This app collects basic student information for generating introductions.
-    2. Ensure the information you provide is accurate.
-    3. Do not share sensitive personal data like passwords.
-    4. By continuing, you agree to use this app responsibly.
-    """)
-
-    agree = st.checkbox("✅ I have read and agree to the above terms")
-
-    if agree:
-        st.session_state.agreed = True
-        st.rerun()
-    else:
-        st.stop()
-    # --- CSS Styling ---
-    st.markdown(
-        """
-        <style>
-        body {
-            background-color: #f0f8ff;
-        }
-        .stButton>button {
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 12px;
-            padding: 10px 24px;
-            font-size: 16px;
-        }
-        .stTextInput>div>div>input, .stNumberInput>div>div>input, .stTextArea>div>div>textarea {
-            border-radius: 8px;
-            padding: 5px;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
     # --- Logo ---
-    if os.path.exists("college_logo.png"):
-        st.markdown("<div style='text-align: center;'><img src='college_logo.png' width='150'></div>", unsafe_allow_html=True)
-
     # --- Title ---
     st.title("🎓 Student Introduction Format Generator")
     st.write("Fill in your details and generate either a **Casual** or a **Professional** introduction!")
