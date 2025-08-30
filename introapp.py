@@ -123,6 +123,17 @@ with st.expander("🎯 Education Background", expanded=False):
 
 # --- Personal Interests (Hobbies) ---
 st.header("🎨 Personal Interests")
+st.markdown(
+    """
+    <style>
+    /* Target the main title rendered by st.title */
+    .stApp h1 {
+        font-size: 32px !important;  /* Change 32px to your desired size */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 hobbies_database = [
     "Cricket","Football (Soccer)","Hockey","Volleyball","Basketball","Kabaddi","Handball",
     "Rugby","Baseball","Softball","Badminton","Tennis","Table Tennis","Squash","Chess",
