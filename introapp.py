@@ -4,6 +4,7 @@ import spacy
 from streamlit_tags import st_tags
 from PIL import Image
 import os
+import importlib
 
 # --- Session State for Verification ---
 if "agreed" not in st.session_state:
