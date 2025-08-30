@@ -266,7 +266,7 @@ st.markdown(
         <h3>Connect with Us</h3>
         <!-- Instagram Icon with Link -->
         <a href="https://www.instagram.com/the_randomness_squad/" target="_blank">
-            <img src="images/instagram.png" width="40" style="margin: 0 10px;">
+            <img src="https://pngimg.com/uploads/instagram/instagram_PNG10.png" width="40" style="margin: 0 10px;">
         </a>
         <p style="margin-top: 10px;">Follow us on Instagram: <a href="https://www.instagram.com/the_randomness_squad/" target="_blank">@the_randomness_squad</a></p>
     </div>
