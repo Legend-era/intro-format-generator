@@ -16,6 +16,22 @@ if os.path.exists("college_logo.png"):
     st.markdown("<div style='text-align: center;'><img src='college_logo.png' width='150'></div>", unsafe_allow_html=True)
 
 # --- Title ---
+# Change font size of main title
+st.markdown(
+    """
+    <style>
+    /* Target the main title rendered by st.title */
+    .stApp h1 {
+        font-size: 32px !important;  /* Change 32px to your desired size */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Display the title
+st.title("🎓 Student Introduction Format Generator")
+
 st.title("🎓 Student Introduction Format Generator")
 st.write("Fill in your details and generate either a **Casual** or a **Professional** introduction!")
 
