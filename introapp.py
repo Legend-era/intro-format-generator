@@ -5,7 +5,7 @@ from streamlit_tags import st_tags
 from PIL import Image
 import os
     # --- Page Config ---
-    st.set_page_config(
+st.set_page_config(
         page_title="Student Intro Generator",
         page_icon="🎓",
         layout="wide"
