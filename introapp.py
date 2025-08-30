@@ -31,37 +31,6 @@ if not st.session_state.agreed:
         st.session_state.agreed = True
         st.rerun()  # Refresh app to show main page
 
-else:
-    # --- Main App Code Starts Here ---
-
-    # --- Load spaCy model with fallback ---
-    import spacy
-    from spacy.cli import download
-    import importlib.util
-
-    model_name = "en_core_web_sm"
-
-    # Check if model is installed
-    if importlib.util.find_spec(model_name) is None:
-        download(model_name)
-
-    def get_spacy_model(model_name="en_core_web_sm"):
-        try:
-            return spacy.load(model_name)
-        except OSError:
-            from spacy.cli import download
-            download(model_name)
-            return spacy.load(model_name)
-    # Load the model
-    nlp = spacy.load(model_name)
-
-    # --- Page Config ---
-    st.set_page_config(
-        page_title="Student Intro Generator",
-        page_icon="🎓",
-        layout="wide"
-    )
-
     # --- CSS Styling ---
     st.markdown(
         """
