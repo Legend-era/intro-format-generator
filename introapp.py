@@ -9,15 +9,7 @@ st.set_page_config(
     page_icon="🎓",
     layout="wide"
 )
-if "header_image.png":
-    st.image("header_image.png", use_column_width=True)
-gallery_images = [
-    "gallery1.png",
-    "gallery2.png",
-    "gallery3.png",
-    "gallery4.png",
-    "gallery5.png"
-]
+st.image("images/header_image.png", use_column_width=True)
 
 # HTML + CSS for continuous horizontal scrolling
 scrolling_html = f"""
