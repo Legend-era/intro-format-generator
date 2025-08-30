@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon="🎓",
     layout="wide"
 )
-st.image("images/header_image.png", use_column_width=True)
+st.image("images/header_image.png", use_container_width=True)
 # --- Logo ---
 if os.path.exists("college_logo.png"):
     st.markdown("<div style='text-align: center;'><img src='college_logo.png' width='150'></div>", unsafe_allow_html=True)
