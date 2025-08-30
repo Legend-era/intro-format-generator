@@ -32,12 +32,21 @@ if not st.session_state.agreed:
 
 else:
     # --- Main App Code Starts Here ---
-    # Load spaCy model
-    try:
-        nlp = spacy.load("en_core_web_sm")
-    except OSError:
-        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
-        nlp = spacy.load("en_core_web_sm")
+    
+    # --- Load spaCy model with fallback ---
+    import spacy
+    import subprocess
+    import importlib.util
+
+    model_name = "en_core_web_sm"
+
+    # Check if model is installed
+    if importlib.util.find_spec(model_name) is None:
+        subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
+
+    # Load the model
+    nlp = spacy.load(model_name)
+
 
     # --- Page Config ---
     st.set_page_config(
