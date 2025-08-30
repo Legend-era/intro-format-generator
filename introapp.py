@@ -9,17 +9,6 @@ st.set_page_config(
     page_icon="🎓",
     layout="wide"
 )
-st.markdown(
-    """
-    <style>
-    /* Target the main title rendered by st.title */
-    .stApp h1 {
-        font-size: 32px !important;  /* Change 32px to your desired size */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 st.image("images/header_image.png", use_container_width=True)
 # --- Logo ---
@@ -122,18 +111,20 @@ with st.expander("🎯 Education Background", expanded=False):
         jee_rank = st.text_input("JEE/OJEE Percentile").replace("%", "")
 
 # --- Personal Interests (Hobbies) ---
-st.header("🎨 Personal Interests")
 st.markdown(
     """
     <style>
-    /* Target the main title rendered by st.title */
-    .stApp h1 {
-        font-size: 32px !important;  /* Change 32px to your desired size */
+    /* Target headers rendered by st.header() */
+    .stApp h2 {
+        font-size: 22px !important;  /* Adjust this size as needed */
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+# Display the header
+st.header("🎨 Personal Interests")
 hobbies_database = [
     "Cricket","Football (Soccer)","Hockey","Volleyball","Basketball","Kabaddi","Handball",
     "Rugby","Baseball","Softball","Badminton","Tennis","Table Tennis","Squash","Chess",
